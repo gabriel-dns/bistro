@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Gastronomia</title>
+    <link rel="shortcut icon" href="imgs/logo.png">
+    <script src="js/scriptHome.js"></script>
+</head>
+
+<style>
+
+ html,body{
+     margin: 0;
+     padding: 0px;
+ } 
+ html{
+     background-color: black;
+ }
+
+ body{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #fff;
+     /* font-family: times new roman; */
+ }
+
+ header{
+   
+     color: #fff;
+ }
+ .banner{
+    max-width: 1900px;
+    width: 100%;
+    background-image: url(../bistro/imgs/banner.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+@media(max-width: 420px){
+    .banner{
+        background-image: none;
+    }
+    body{
+        background-image: url(../bistro/imgs/banner.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+ header{
+     font-family: 'Hind Siliguri', sans-serif;
+     height: 11rem; /*80px*/
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding-left: 30px;
+     width: 100%;
+ }
+ nav{
+     display: flex;
+     height: 100%;
+     align-items: center;
+     justify-content: center;
+     padding-right: 85px;
+     padding-top: 10px;
+     flex-grow: 1;
+ }
+ 
+ ul{
+     margin: 0;
+     display: flex;
+     list-style: none;
+ }
+ 
+ ul a{
+     text-decoration: none;
+     color: #fff;
+     font-size: 1.6rem;
+     padding: 10px 22px;
+     margin-right: 20px;
+     cursor: pointer;
+ }
+ ul a:hover{
+     box-shadow: 0 8px 15px #e0ca8f;
+     background-color: rgba(255,102,0,0.4);
+     border-radius: 20px;
+ }
+ .logo{
+     height: 260px;
+ }
+ 
+ .toggle img{
+     height: 25px;
+     padding: 0 15px;
+     display: none;
+     }
+ 
+     @media(max-width:1100px){
+         ul a{
+             font-size: 1.3rem;
+         }
+     }
+     @media(max-width:880px){
+         nav{
+             display: none;
+         }
+         header{
+             justify-content: center;
+             padding-left: 15px;
+         }
+     }
+ 
+ @media(max-width: 1000px){
+     ul a{
+         padding: 9px 10px; 
+     }
+    
+ }
+ .banner-bottom{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     height: 500px;
+ }
+ 
+ .titles{
+     height: 400px;
+     width: 60%;
+     display: flex;
+     flex-direction: column;
+     color: #fff;
+     font-size: 40px;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     
+ }
+ .titles h2{
+     font-size: 0.9em;
+     margin: 0;
+     margin-bottom:10px;
+     text-align: center;
+     display: flex;
+ }
+ .titles h1{
+     text-align: center;
+     margin: 0;
+     display: flex;
+     /* font-size: ; */
+ }
+ 
+ @media(max-width:1200px){
+     .titles{
+         font-size: 45px;
+     }
+ 
+ }
+ @media(max-width: 935px){
+     .titles{
+         font-size: 40px;
+     }
+ 
+ }
+ @media(max-width: 670px){
+     .titles{
+         font-size: 35px;
+     }
+ 
+ }
+ @media(max-width: 280px){
+     .titles{
+         font-size: 28px;
+     }
+ 
+ }
+ .pratos{
+     height: 32.4rem;
+     background-color: #fff;
+     display: flex;
+     justify-content: flex-end;
+     width: 100%;
+     max-width: 1900px;
+ }
+ .more{
+   font-size: 1.8rem;
+   color: #ff6600;
+   width: 20%;
+   margin: 0;
+ }
+ .more button{
+    padding: 15px 25px;
+	background-color: #fff;
+	border-width: 3px;
+	border-radius: 10%;
+	border-color: #ff6600;
+	color: #ff6600;
+	font-size: 20px;
+	font-weight: bold;
+	
+	}
+    .more button:hover{
+        box-shadow: 5px 8px 15px #FF4500;
+    }
+
+
+ .figures{
+     display: flex;
+     /* background-color: yellow; */
+     width: 55%;
+     justify-content: center;
+     
+ }
+ figure{
+    width: 285px;
+    height: 94%;
+    border-radius: 30px;
+    background-color: rgba(255,102,0,0.9);
+    margin: 15px 20px;
+    /* display: flex;
+    flex-direction: column; */
+ }
+ .figure:hover{
+	background-color: #FF4500;
+	box-shadow: 0 8px 15px #000000;	
+}
+ figure img{
+     width: 100%;
+     border-radius: 20px;
+ }
+ .figcaption{
+	padding: 10px;
+	color: #fff;
+	font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media(max-width: 1100px){
+ .pratos{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 43rem;
+
+}
+
+body{
+    background-size: 1500px;
+}
+.more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more button{
+    margin-left: 20px;
+}
+.figures{
+width: 100%;
+flex-wrap: wrap;
+min-height: 550px;
+}  
+}
+
+@media(max-width:650px){
+    .pratos{
+       height: 80rem;
+       justify-content: flex-start;
+
+   
+   }
+   .figures{
+    width: 100%;
+    height: 200px;
+    }  
+}
+@media(max-width:470px){
+    .pratos{
+       height: 82rem;
+       justify-content: flex-start;
+
+   
+   }
+   .figure{
+    height: 500px;
+    }  
+}
+ 
+
+.sobre{
+    height: 28.13rem;
+    background-image: url(../bistro/imgs/imagem_lugarcompleto.jpg);
+    width: 100%;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 20px;
+}
+.texto-sobre{
+    width: 35%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.texto-sobre h1{
+    font-size: 1.5em;
+    width: 65%;
+}
+.texto-sobre p{
+    font-size: 1em;
+    text-align: left;
+    width: 90%;
+    opacity: 0.9;
+  
+}
+.reserva{
+    width: 50%;
+    border:none;
+    padding: 15px;
+    border-radius: 10px;
+    color: #ff6600;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: solid 1px black;
+    transition: 0.3s ;
+}
+.reserva:hover{
+    background-color: black;
+      }
+
+
+    @media(max-width:990px){
+        .sobre{
+         justify-content: center;
+         height: 35.4rem;
+        }
+        .texto-sobre{
+            width: 80%;
+        }
+        
+     }
+    @media(max-width:485px){
+        .sobre{
+            height: 35.4rem;
+        }
+        
+     }
+
+      
+ 
+ 
+.rodape{
+    background-color: #DF5200;
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dln{
+    display: flex;
+    align-items: center;
+}
+.dln img{
+    height: 55px;
+    margin-right: 15px;
+}
+.logo-footer img{
+    height: 100px;
+
+}
+.rodape a{
+text-decoration: none;
+color: #fff;
+font-size: 20px;
+}  
+</style>
+
+<body>
+
+  
+        
+    <div class="banner">
+
+   
+
+       
+    <header>
+        <img class="logo" src="../bistro/imgs/logo.png" alt="logotipo">
+        <nav class="menu">
+            
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li><a onclick="scrol('um')">Cardápio</a></li>
+                <li><a onclick="scrol('sobre')">Sobre Nós</a></li>
+                <li><a  onclick="scrol('contato')">Contato</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div class="banner-bottom">
+    <div class="titles">
+        <h2>Massas, files e vinhos, Bistro!</h2>
+        <h1>Desfrute da arte da Gastronomia</h1>
+
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+<section class="pratos" id="um">
+    <div class="more">
+        <h2>Nossos principais pratos</h2>
+        <button  onclick="scrol('contato')">
+          Peça Agora!
+        </button>
+
+    </div>
+    <div class="figures">
+
+    
+     <figure class="figure">
+		<img src="imgs/salmao.jpg" alt="">
+		<figcaption class="figcaption">
+			<h3>Salmão Grelhado</h3>
+		</figcaption>
+	</figure>
+
+	<figure class="figure">
+		<img src="imgs/ravioli.jpg" alt="">
+		<figcaption class="figcaption">
+			<h3>Ravioli de Ricota</h3>
+		</figcaption> 
+</figure>
+
+</div>
+
+
+
+</section>
+
+<div class="sobre" id="sobre">
+<div class="texto-sobre">
+    <h1>
+    Um Lugar completo
+
+    para os apreciadores
+
+    de boa comida
+    </h1>
+    <p>
+        No nosso restaurante você irá encontrar as melhores
+e mais variadas opções de menu para saborear e
+deixar o seu seu dia mais gostoso! Além disso
+oferecemos aos nossos clientes um espaço amplo
+e com música ao vivo.
+    </p>
+    <button class="reserva">
+        Reserve sua mesa
+    </button>
+</div>
+<div>
+
+</div>
+
+</div>
+
+<footer class="rodape" id="contato">
+    
+    <div class="logorodape">
+        <img class="logo" src="../bistro/imgs/logo.png" alt="logotipo">
+    </div>
+
+    <div class="redes">
+        <div class="dln">
+            <a target="blank" href="https://www.linkedin.com/in/gabriel-nascimento-797187216">
+            <img src="../bistro/imgs/linkedin.png" alt="Linkedln">
+        </a>
+           <a target="blank" href="https://www.linkedin.com/in/gabriel-nascimento-797187216">Gabriel Nascimento</a> 
+        </div>
+
+    </div>
+
+
+   
+</footer>
+
+
+    
+</body>
+
+
+</html>
